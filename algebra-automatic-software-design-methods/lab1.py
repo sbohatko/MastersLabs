@@ -46,7 +46,7 @@ def nfa_to_dfa(nfa):
 
             next_states_e_closure = epsilon_closure(next_states, transitions)
 
-            if next_states_e_closure not in dfa_states:
+            if next_states_e_closure not in dfa_states and len(next_states_e_closure) > 0:
                 dfa_states.append(next_states_e_closure)
                 unprocessed_states.append(next_states_e_closure)
 
