@@ -2,7 +2,6 @@
 //
 #include "iostream"
 #include <stdlib.h>
-#include <conio.h>
 #include <time.h>
 
 void RandomDataInitialization(double* pAMatrix, double* pBMatrix,

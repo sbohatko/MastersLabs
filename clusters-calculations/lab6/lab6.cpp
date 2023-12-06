@@ -1,6 +1,5 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <conio.h>
 #include <time.h>
 #include <math.h>
 #include <mpi.h>
@@ -124,7 +123,7 @@ void DummyDataInitialization(double* pMatrix, int Size) {
 
 // Function for memory allocation and initialization of grid nodes
 void ProcessInitialization(double*& pMatrix, double*& pProcRows, int& Size, int& RowNum, double& Eps) {
-	int RestRows; // Number of rows, that haven’t been distributed yet
+	int RestRows; // Number of rows, that havenï¿½t been distributed yet
 	// Setting the grid size
 	if (ProcRank == 0) {
 		do {
@@ -156,7 +155,7 @@ void ProcessInitialization(double*& pMatrix, double*& pProcRows, int& Size, int&
 	RowNum = (RestRows - 2) / (ProcNum - ProcRank) + 2;
 	// Memory allocation
 	pProcRows = new double[RowNum * Size];
-	// Define the values of initial objects’ elements
+	// Define the values of initial objectsï¿½ elements
 	if (ProcRank == 0) {
 		// Initial matrix exists only on the pivot process
 		pMatrix = new double[Size * Size];
