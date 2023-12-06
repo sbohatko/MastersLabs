@@ -233,7 +233,7 @@ void ProcessTermination(double* pMatrix, double* pVector, double* pResult, doubl
 	delete[] pProcResult;
 }
 
-int main(int *argc, char* argv[])
+main(int *argc, char* argv[])
 {
 	double* pMatrix; // First argument - initial matrix
 	double* pVector; // Second argument - initial vector
